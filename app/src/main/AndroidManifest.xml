@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Song_list_items"></activity>
+        <activity android:name=".Song_list_items" />
+        <activity android:name=".album"></activity>
     </application>
 
 </manifest>
