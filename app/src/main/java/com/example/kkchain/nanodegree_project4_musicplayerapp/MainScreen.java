@@ -12,12 +12,12 @@ import java.util.ArrayList;
 
 public class MainScreen extends AppCompatActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
 
         // Create an ArrayList of Album Song Titles
-        ArrayList<Song> songs = new ArrayList<Song>();
+        final ArrayList<Song> songs = new ArrayList<Song>();
         songs.add(new Song("London Bridge"));
         songs.add(new Song("Itsy Bitsy Spider"));
         songs.add(new Song("A,B,C,...Z"));
@@ -28,7 +28,7 @@ public class MainScreen extends AppCompatActivity {
         songs.add(new Song("Roll Roll Your Boat"));
 
         // Create a link to Listview and apply adapter
-        SongAdapter adapter = new SongAdapter(this, songs);
+        final SongAdapter adapter = new SongAdapter(this, songs);
         ListView listV = findViewById(R.id.list_view_mainScreen);
         listV.setAdapter(adapter);
 
@@ -37,8 +37,9 @@ public class MainScreen extends AppCompatActivity {
         listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Song item = adapter.getItem(position);
                 Intent intent = new Intent(MainScreen.this, album.class);
+                intent.putExtra("songName", item.getTheSongName());
                 startActivity(intent);
             }
         });

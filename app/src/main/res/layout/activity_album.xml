@@ -32,5 +32,34 @@
         android:scaleType="fitXY"
         android:id="@+id/song_picture"/>
 
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:orientation="horizontal"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="35dp"
+           android:layout_marginRight="30dp">
+
+           <ImageView
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_weight="1"
+               android:src="@drawable/ic_action_playback_rew" />
+
+           <ImageView
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_weight="1"
+               android:src="@drawable/ic_action_playback_play" />
+
+           <ImageView
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_weight="1"
+               android:src="@drawable/ic_action_playback_forw" />
+
+       </LinearLayout>
+
 </LinearLayout>
 
