@@ -14,6 +14,10 @@ public class MainScreen extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Set the Action Bar Title
+        setTitle("List of Songs");
+
         setContentView(R.layout.activity_main_screen);
 
         // Create an ArrayList of Album Song Titles

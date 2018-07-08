@@ -10,11 +10,14 @@ public class album extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Set the Action Bar Title
+        setTitle("Now Playing");
+
         setContentView(R.layout.activity_album);
 
         //Gather Intent Extra from MainScreen//
-
-        String selectedSong = getIntent().getStringExtra("SongName");
+        String selectedSong = getIntent().getStringExtra("songName");
 
         //Populate XML with gathered intent extras from MainScreen Activity//
         TextView album = findViewById(R.id.song_title);
