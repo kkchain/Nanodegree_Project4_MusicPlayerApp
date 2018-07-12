@@ -30,7 +30,7 @@
         android:layout_gravity="center_horizontal"
         android:src="@drawable/london_bridge"
         android:scaleType="fitXY"
-        android:id="@+id/song_image"/>
+        android:id="@+id/songImage"/>
 
 
        <LinearLayout

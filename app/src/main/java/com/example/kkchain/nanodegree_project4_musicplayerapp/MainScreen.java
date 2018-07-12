@@ -22,14 +22,14 @@ public class MainScreen extends AppCompatActivity {
 
         // Create an ArrayList of Album Song Titles
         final ArrayList<Song> songs = new ArrayList<Song>();
-        songs.add(new Song("London Bridge"));
-        songs.add(new Song("Itsy Bitsy Spider"));
-        songs.add(new Song("A,B,C,...Z"));
-        songs.add(new Song("Rain Rain Go Away"));
-        songs.add(new Song("Old MacDonald Has a Farm"));
-        songs.add(new Song("The Wheel on the Bus"));
-        songs.add(new Song("Twinkle Twinkle Little Star"));
-        songs.add(new Song("Roll Roll Your Boat"));
+        songs.add(new Song("London Bridge",R.drawable.london_bridge));
+        songs.add(new Song("Itsy Bitsy Spider", R.drawable.spider));
+        songs.add(new Song("A,B,C,...Z",R.drawable.abc));
+        songs.add(new Song("Rain Rain Go Away", R.drawable.rain_rain));
+        songs.add(new Song("Old MacDonald Has a Farm", R.drawable.farm));
+        songs.add(new Song("The Wheel on the Bus", R.drawable.bus));
+        songs.add(new Song("Twinkle Twinkle Little Star", R.drawable.twinkle_star));
+        songs.add(new Song("Roll Roll Your Boat", R.drawable.boat));
 
         // Create a link to Listview and apply adapter
         final SongAdapter adapter = new SongAdapter(this, songs);
@@ -44,6 +44,7 @@ public class MainScreen extends AppCompatActivity {
                 Song item = adapter.getItem(position);
                 Intent intent = new Intent(MainScreen.this, album.class);
                 intent.putExtra("songName", item.getTheSongName());
+                intent.putExtra("image", item.getImageResourceId());
                 startActivity(intent);
             }
         });
