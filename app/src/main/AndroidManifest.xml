@@ -12,12 +12,12 @@
         <activity android:name=".MainScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Song_list_items" />
-        <activity android:name=".album"></activity>
+        <activity android:name=".album"
+                  android:parentActivityName=".MainScreen"></activity>
     </application>
 
 </manifest>

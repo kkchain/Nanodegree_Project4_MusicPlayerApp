@@ -16,6 +16,7 @@ public class album extends AppCompatActivity {
 
         setContentView(R.layout.activity_album);
 
+
         //Gather Intent Extra from MainScreen
         String selectedSong = getIntent().getStringExtra("songName");
         int selectedImage = Integer.parseInt(getIntent().getStringExtra("image"));
