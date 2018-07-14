@@ -19,11 +19,15 @@ public class album extends AppCompatActivity {
 
         //Gather Intent Extra from MainScreen
         String selectedSong = getIntent().getStringExtra("songName");
+        String selectedArtist = getIntent().getStringExtra("artistName");
         int selectedImage = Integer.parseInt(getIntent().getStringExtra("image"));
 
         //Populate XML with gathered intent extras from MainScreen Activity
         TextView album = findViewById(R.id.song_title);
         album.setText(selectedSong);
+
+        TextView album2 = findViewById(R.id.artist);
+        album2.setText(selectedArtist);
 
         ImageView i = findViewById(R.id.songImage);
         i.setImageResource(selectedImage);

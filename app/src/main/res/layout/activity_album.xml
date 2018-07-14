@@ -32,6 +32,14 @@
         android:scaleType="fitXY"
         android:id="@+id/songImage"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Artist"
+        android:textStyle="bold|italic"
+        android:id="@+id/artist"/>
 
        <LinearLayout
            android:layout_width="match_parent"

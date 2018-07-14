@@ -40,7 +40,6 @@ public class SongAdapter extends ArrayAdapter<Song> {
         songTextView.setText(currentSong.getTheSongName());
 
 
-
         return listItemView;
 
 

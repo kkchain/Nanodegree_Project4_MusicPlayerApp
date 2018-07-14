@@ -22,14 +22,14 @@ public class MainScreen extends AppCompatActivity {
 
         // Create an ArrayList of Album Song Titles
         final ArrayList<Song> songs = new ArrayList<Song>();
-        songs.add(new Song("London Bridge",R.drawable.london_bridge));
-        songs.add(new Song("Itsy Bitsy Spider", R.drawable.spider));
-        songs.add(new Song("A,B,C,...Z",R.drawable.abc));
-        songs.add(new Song("Rain Rain Go Away", R.drawable.rain));
-        songs.add(new Song("Old MacDonald Has a Farm", R.drawable.farm));
-        songs.add(new Song("The Wheel on the Bus", R.drawable.bus));
-        songs.add(new Song("Twinkle Twinkle Little Star", R.drawable.stars));
-        songs.add(new Song("Roll Roll Your Boat", R.drawable.kayak));
+        songs.add(new Song("London Bridge","London Bridge is Falling Down",R.drawable.london_bridge));
+        songs.add(new Song("Itsy Bitsy Spider","Nursery Rhyme", R.drawable.spider));
+        songs.add(new Song("A,B,C,...Z","ABC songs for Children",R.drawable.abc));
+        songs.add(new Song("Rain Rain Go Away","Chelsy Chain", R.drawable.rain));
+        songs.add(new Song("Old MacDonald Has a Farm","E I E I O", R.drawable.farm));
+        songs.add(new Song("The Wheel on the Bus","Go Round and Round",R.drawable.bus));
+        songs.add(new Song("Twinkle Twinkle Little Star","Night Star" , R.drawable.stars));
+        songs.add(new Song("Roll Roll Your Boat","Down the Stream", R.drawable.kayak));
 
         // Create a link to Listview and apply adapter
         final SongAdapter adapter = new SongAdapter(this, songs);
@@ -44,8 +44,9 @@ public class MainScreen extends AppCompatActivity {
                 Song item = adapter.getItem(position);
                 Intent intent = new Intent(MainScreen.this, album.class);
                 intent.putExtra("songName", item.getTheSongName());
-                int artwork = item.getImageResourceId();
-                intent.putExtra("image", Integer.toString(artwork));
+                intent.putExtra("artistName", item.getArtistName());
+                int imageV = item.getImageResourceId();
+                intent.putExtra("image", Integer.toString(imageV));
                 startActivity(intent);
             }
         });
